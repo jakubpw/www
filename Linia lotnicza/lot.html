@@ -36,7 +36,7 @@
             <p>Czas lotu: 2,5h</p>
             <p>Super wygodny smolot typu szybciutki, miejsc nie za dużo, lepiej kupić wcześniej miejsce</p>
             <img src="samolot.jpg" alt="Samolot">
-        
+
             <ol>
                 <li>Maryla Rodowicz</li>
                 <li>Krzysztof Krawczyk (tym razem nie parostatkiem?)</li>
@@ -46,8 +46,39 @@
         <aside>
             <h1>Opóźnienia</h1>
             <pi id="Opóznienie1">Loty z Paryża do Berlina dnia 23.05.2020r. o godzinie 14:22 opóżniony o 100 minut</p>
-            <p id="Opóznienie2">Lot z Berlina do Warszawy dnia 21.05.2020r. o godzinie 13:33 opóźniony o 15 minut</p>
-            <p id="Opóznienie3">Loty z Paryża do Berlina dnia 22.05.2020r. odwołane</p>
+                <p id="Opóznienie2">Lot z Berlina do Warszawy dnia 21.05.2020r. o godzinie 13:33 opóźniony o 15 minut
+                </p>
+                <p id="Opóznienie3">Loty z Paryża do Berlina dnia 22.05.2020r. odwołane</p>
+            <form>
+                <div id = "formularz">
+                <h1>Formularz rezerwacji lotu</h1>
+                <br><br>
+                <label for = "Skad">Skąd:</label>
+                <select>
+                    <optgroup label = "Skąd">
+                        <option>Warszawa</option>
+                        <option>Paryż</option>
+                    </optgroup>
+                </select>
+                <br><br>
+                <label for = "Dokąd">Dokąd:</label>
+                <select>
+                    <optgroup label = "Dokąd">
+                        <option>Warszawa</option>
+                        <option>Paryż</option>
+                    </optgroup>
+                </select>
+                <br><br>
+                <label for="Imie">Imie:</label><br>
+                <input type="text" placeholder="Jan" id="Imie" required><br><br>
+                <label for="Nazwisko">Nazwisko:</label><br>
+                <input type="text" placeholder="Kowalski" id="Nazwisko" required><br><br>
+                <label for="Data">Data:</label>
+                <input type="date" id="Data" required><br><br>
+                <input type="reset" value="Reset" /> 
+                <input type="submit" value="Wyślij">
+                </div>
+            </form>
         </aside>
 
     </div>

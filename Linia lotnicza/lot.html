@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,25 +9,49 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
+
 <body>
-    <h1>Połączenie Warszawy z Paryżem</h1>
-    <img src="paryż.jpg" alt="Zdjęcie Paryża">
-    <br>
-    <a href="https://pl.wikipedia.org/wiki/Pary%C5%BC">Paryż</a>
-    <br>
-    <br>
-    <img src="warszwa.jpg" alt="Zdjęcie Warszawy">
-    <br>
-    <a href="https://pl.wikipedia.org/wiki/Warszawa">Warszawa</a>
-    <p>Nie za bardzo wiem, jaka będzie pogoda za pół roku, ale podejrzewam, że dość ciepło.</p>
-    <p>Czas lotu: 2,5h</p>
-    <p>Super wygodny smolot typu szybciutki, miejsc nie za dużo, lepiej kupić wcześniej miejsce</p>
-    <img src="samolot.jpg" alt="Samolot">
-    <a href="Lista_lotów.html" id = "powrót">Powrót</a>
-    <ol>
-        <li>Maryla Rodowicz</li>
-        <li>Krzysztof Krawczyk (tym razem nie parostatkiem?)</li>
-        <li>Bracia Golec</li>
-      </ol>
+    <div class="flex-container">
+        <header>
+            <h1>Połączenie Warszawy z Paryżem</h1>
+            <nav>
+                <ul> MENU
+                    <li><a href="Lista_lotów.html">Strona Główna</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><a href="Formularz_rezerwacji.html">Formularz rezerwacji lotu</a></li>
+                </ul>
+
+            </nav>
+        </header>
+        <main>
+            <img src="paryż.jpg" alt="Zdjęcie Paryża">
+            <br>
+            <a href="https://pl.wikipedia.org/wiki/Pary%C5%BC">Paryż</a>
+            <br>
+            <br>
+            <img src="warszwa.jpg" alt="Zdjęcie Warszawy">
+            <br>
+            <a href="https://pl.wikipedia.org/wiki/Warszawa">Warszawa</a>
+            <p>Nie za bardzo wiem, jaka będzie pogoda za pół roku, ale podejrzewam, że dość ciepło.</p>
+            <p>Czas lotu: 2,5h</p>
+            <p>Super wygodny smolot typu szybciutki, miejsc nie za dużo, lepiej kupić wcześniej miejsce</p>
+            <img src="samolot.jpg" alt="Samolot">
+        
+            <ol>
+                <li>Maryla Rodowicz</li>
+                <li>Krzysztof Krawczyk (tym razem nie parostatkiem?)</li>
+                <li>Bracia Golec</li>
+            </ol>
+        </main>
+        <aside>
+            <h1>Opóźnienia</h1>
+            <pi id="Opóznienie1">Loty z Paryża do Berlina dnia 23.05.2020r. o godzinie 14:22 opóżniony o 100 minut</p>
+            <p id="Opóznienie2">Lot z Berlina do Warszawy dnia 21.05.2020r. o godzinie 13:33 opóźniony o 15 minut</p>
+            <p id="Opóznienie3">Loty z Paryża do Berlina dnia 22.05.2020r. odwołane</p>
+        </aside>
+
+    </div>
+
 </body>
+
 </html>

@@ -1,35 +1,37 @@
 footer {
-    background-color: aliceblue;
-    color: green;
-    font-family: sans-serif;
-    font-size: 30px;
-    width: 50%;
-    margin: auto;
-  }
-
-body {
-    text-align: center;
-    font-size: 35px;
+  background-color: aliceblue;
+  color: green;
+  font-family: sans-serif;
+  font-size: 30px;
+  width: 50%;
+  margin: auto;
 }
 
-table {	
+body {
+  text-align: center;
+  font-size: 35px;
+}
+
+table {
   margin: auto;
   border: 4px inset lightseagreen;
   background-color: lightslategrey;
-  border-collapse: collapse;	
+  border-collapse: collapse;
   text-align: left;
-	font-family: sans-serif;
+  font-family: sans-serif;
   padding-left: 19px;
   padding-right: 19px;
   padding-top: 9px;
   padding-bottom: 9px;
 }
 
-th , tr{
+th,
+tr {
   border: 2px solid lightseagreen;
 }
 
-thead th, thead tr {
+thead th,
+thead tr {
   font-weight: 400;
 }
 
@@ -39,7 +41,7 @@ thead th, thead tr {
   width: 60%;
   margin: auto;
   margin-bottom: 20px;
-  border:groove 5px lightseagreen;
+  border: groove 5px lightseagreen;
 }
 
 #drugi {
@@ -48,10 +50,10 @@ thead th, thead tr {
   width: 60%;
   margin: auto;
   margin-bottom: 10px;
-  border:groove 5px lightseagreen;
+  border: groove 5px lightseagreen;
 }
 
-#trzeci{
+#trzeci {
   background-color: yellow;
   color: rgb(195, 26, 26);
   font-size: 12px;
@@ -61,10 +63,10 @@ thead th, thead tr {
   left: 40%;
 }
 
-#tabela{
+#tabela {
   position: relative;
 }
-img{
+img {
   width: 300px;
 }
 #logo {
@@ -77,4 +79,34 @@ img{
   position: absolute;
   top: 1300px;
   left: 1200px;
+}
+nav ul {
+  list-style-type: none;
+  text-transform: uppercase;
+}
+li a:link,li a:visited {
+  color: black;
+  text-decoration: none;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+header {
+  font-size: 20px;
+}
+aside {
+  font-size: 15px;
+}
+#Opóznienie1 {
+  font-weight: 700;
+  background-color: orange;
+}
+#Opóznienie2 {
+  font-weight: 700;
+  background-color: yellow;
+}
+#Opóznienie3 {
+  font-weight: 700;
+  background-color: red;
 }

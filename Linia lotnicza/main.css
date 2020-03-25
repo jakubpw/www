@@ -1,0 +1,80 @@
+footer {
+    background-color: aliceblue;
+    color: green;
+    font-family: sans-serif;
+    font-size: 30px;
+    width: 50%;
+    margin: auto;
+  }
+
+body {
+    text-align: center;
+    font-size: 35px;
+}
+
+table {	
+  margin: auto;
+  border: 4px inset lightseagreen;
+  background-color: lightslategrey;
+  border-collapse: collapse;	
+  text-align: left;
+	font-family: sans-serif;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+th , tr{
+  border: 2px solid lightseagreen;
+}
+
+thead th, thead tr {
+  font-weight: 400;
+}
+
+#pierwszy {
+  padding: 5px;
+  background: lightseagreen;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 20px;
+  border:groove 5px lightseagreen;
+}
+
+#drugi {
+  padding: 5px;
+  background: lightslategrey;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 10px;
+  border:groove 5px lightseagreen;
+}
+
+#trzeci{
+  background-color: yellow;
+  color: rgb(195, 26, 26);
+  font-size: 12px;
+  width: 70px;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+}
+
+#tabela{
+  position: relative;
+}
+img{
+  width: 300px;
+}
+#logo {
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 1100px;
+}
+#powrót {
+  position: absolute;
+  top: 1300px;
+  left: 1200px;
+}

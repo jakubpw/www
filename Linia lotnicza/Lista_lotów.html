@@ -12,49 +12,105 @@
 
 <body>
 
+  <div class="grid-container">
+    <header class="item1">
+      <img src="lot.jpg" alt="logo firmy" id="logo">
+      <h1>Lista lotów</h1>
 
-  <h1>Lista lotów</h1>
-  <img src="lot.jpg" alt="logo firmy" id="logo">
+    </header>
 
 
-  <p id="pierwszy">Poniżej tabela najbliższych lotów</p>
-  <p id="drugi">Połączenia pomiędzy stolicami Polski i Francji</p>
 
-  <div id="tabela">
-    <p id="trzeci">Ale super lot!</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Numer lotu</th>
-          <th>Skąd</th>
-          <th>Dokąd</th>
-          <th>Data</th>
-          <th>Godzina</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th><a href="lot.html">12342</a></th>
-          <th>Warszawa</th>
-          <th>Paryż</th>
-          <th>05.06.2020</th>
-          <th>20:23</th>
-        </tr>
-        <tr>
-          <th><a href="lot.html">232426</a></th>
-          <th>Paryż</th>
-          <th>Warszawa</th>
-          <th>07.07.2020</th>
-          <th>11:22</th>
-        </tr>
-      </tbody>
 
-    </table>
+    <nav class="item2">
+
+      <ul> MENU
+        <li><a href="Lista_lotów.html">Strona Główna</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        <li><a href="Formularz_rezerwacji.html">Formularz rezerwacji lotu</a></li>
+        <li><a href="zasłonięta.html">Strona zasłonięta (zadanie 11)</a></li>
+      </ul>
+
+    </nav>
+    <main class="item3">
+
+      <p id="pierwszy">Poniżej tabela najbliższych lotów</p>
+      <p id="drugi">Połączenia pomiędzy stolicami Polski i Francji</p>
+
+      <div id="tabela">
+        <p id="trzeci">Ale super lot!</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Numer lotu</th>
+              <th>Skąd</th>
+              <th>Dokąd</th>
+              <th>Data</th>
+              <th>Godzina</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><a href="lot.html">12342</a></th>
+              <th>Warszawa</th>
+              <th>Paryż</th>
+              <th>05.06.2020</th>
+              <th>20:23</th>
+            </tr>
+            <tr>
+              <th><a href="lot.html">232426</a></th>
+              <th>Paryż</th>
+              <th>Warszawa</th>
+              <th>07.07.2020</th>
+              <th>11:22</th>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </main>
+    <aside class="item4">
+      <h1>Opóźnienia</h1>
+      <pi id="Opóznienie1">Loty z Paryża do Berlina dnia 23.05.2020r. o godzinie 14:22 opóżniony o 100 minut</p>
+        <p id="Opóznienie2">Lot z Berlina do Warszawy dnia 21.05.2020r. o godzinie 13:33 opóźniony o 15 minut
+        </p>
+        <p id="Opóznienie3">Loty z Paryża do Berlina dnia 22.05.2020r. odwołane</p>
+        <form>
+          <div id="formularz">
+            <h1>Formularz rezerwacji lotu</h1>
+            <br><br>
+            <label for="Skad">Skąd:</label>
+            <select>
+              <optgroup label="Skąd">
+                <option>Warszawa</option>
+                <option>Paryż</option>
+              </optgroup>
+            </select>
+            <br><br>
+            <label for="Dokąd">Dokąd:</label>
+            <select>
+              <optgroup label="Dokąd">
+                <option>Warszawa</option>
+                <option>Paryż</option>
+              </optgroup>
+            </select>
+            <br><br>
+            <label for="Imie">Imie:</label><br>
+            <input type="text" placeholder="Jan" id="Imie" required><br><br>
+            <label for="Nazwisko">Nazwisko:</label><br>
+            <input type="text" placeholder="Kowalski" id="Nazwisko" required><br><br>
+            <label for="Data">Data:</label>
+            <input type="date" id="Data" required><br><br>
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Wyślij">
+          </div>
+        </form>
+    </aside>
+    <footer class="item5">
+      Autor: <address>Jakub Walendowski (jawalendowski@gmail.com)</address>
+    </footer>
   </div>
 
-  <footer>
-    Autor: <address>Jakub Walendowski (jawalendowski@gmail.com)</address>
-  </footer>
 </body>
 
 </html>

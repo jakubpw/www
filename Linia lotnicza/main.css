@@ -9,7 +9,7 @@ footer {
 
 body {
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 table {
@@ -60,20 +60,19 @@ thead tr {
   width: 70px;
   position: absolute;
   top: 60%;
-  left: 40%;
+  left: 34%;
 }
 
 #tabela {
   position: relative;
 }
 img {
-  width: 300px;
+  width: 200px;
 }
 #logo {
   position: absolute;
   display: block;
-  top: 20px;
-  left: 1100px;
+
 }
 #powrót {
   position: absolute;
@@ -181,8 +180,8 @@ aside {
 }
 .hover_bkgr {
   background-color: #fff;
-  box-shadow: 10px 10px 60px #555;
-  opacity: 0.6;
+  box-shadow: 10px 10px 60px rgb(42, 42, 42);
+  opacity: 0.9;
   height: 100%;
   width: 100%;
   vertical-align: middle;

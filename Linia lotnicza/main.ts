@@ -6,17 +6,17 @@ function check_form() {
   const przycisk = document.getElementById("przycisk") as HTMLInputElement;
   let res = ``;
   if (imieEl.value === ``)
-      res += `<p> Imię nie może być puste </p>`;
+    res += `<p> Imię nie może być puste </p>`;
   if (nazwiskoEl.value === ``)
-      res += `<p> Naziwsko nie może być puste </p>`;
+    res += `<p> Naziwsko nie może być puste </p>`;
   if (dataEl.value === ``) {
-      res += `<p>Data nie moze być pusta</p>`;
+    res += `<p>Data nie moze być pusta</p>`;
   }
   else {
-      const formDate = new Date(dataEl.value);
-      const currDate = new Date();
-      if (formDate.setHours(0, 0, 0, 0) < currDate.setHours(0, 0, 0, 0))
-          res += `<p>Data nie może być wcześniejsza niż aktualna</p>`;
+    const formDate = new Date(dataEl.value);
+    const currDate = new Date();
+    if (formDate.setHours(0, 0, 0, 0) < currDate.setHours(0, 0, 0, 0))
+      res += `<p>Data nie może być wcześniejsza niż aktualna</p>`;
   }
   if (res !== ``) {
     przycisk.disabled = true;
@@ -34,14 +34,14 @@ setTimeout(() => {
 
 function wait(ms: number) {
   return new Promise((resolve, reject) =>
-      setTimeout(resolve, ms)
+    setTimeout(resolve, ms)
   )
 }
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
 async function teczoweKolory(el: HTMLElement) {
   for (const color of colors) {
-      await wait(1000)
-      el.style.backgroundColor = color;
+    await wait(1000)
+    el.style.backgroundColor = color;
   }
 }
 
@@ -52,9 +52,9 @@ if (tabelaLotow)
 let image: HTMLImageElement = (document.getElementById('zdjecie') as HTMLImageElement)
 
 fetch('https://api.github.com/repos/Microsoft/TypeScript/commits').then(response => response.json()).then((data) => {
-    image.src = data[0].author.avatar_url
+  image.src = data[0].author.avatar_url
 }).catch(() => {
-    console.log('Problem with fetch image.')
+  console.log('Problem with fetch image.')
 })
 var clickCounter = 0;
 var fibs = [0, 1];
@@ -72,7 +72,7 @@ var clickHandler = function (e) {
   clickCounter++;
   var elem = e.target;
   if (!right.contains(elem))
-      return;
+    return;
   tabelaLotow.style.backgroundColor = colors[clickCounter % colors.length];
 };
 grid.addEventListener("click", clickHandler);
@@ -83,12 +83,12 @@ rezerwacja.addEventListener("click", (e: Event) => {
 grid.oninput = (event) => {
   const el = event.target;
   if (el instanceof Element && rezerwacja.contains(el)) {
-      check_form();
+    check_form();
   }
 }
 rezerwacja.addEventListener("submit", (e) => {
   let res = "Imie: " + imieEl.value + " Nazwisko: " + nazwiskoEl.value +
-  " Data: " + dataEl.value;
+    " Data: " + dataEl.value;
   document.getElementById('zaslona').hidden = false;
   document.getElementById('fError').innerHTML = res;
   e.preventDefault();

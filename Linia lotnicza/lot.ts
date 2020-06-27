@@ -1,4 +1,4 @@
-function best_passenger(){
+function best_passenger() {
     var listaPasazerow = document.getElementsByClassName("lista")[0].getElementsByTagName("li");
     var najImie = listaPasazerow[0].innerText;
     var najId = listaPasazerow[0].getAttribute('data-identyfikator-pasazera');

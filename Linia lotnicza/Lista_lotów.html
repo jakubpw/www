@@ -10,7 +10,7 @@
   
 </head>
 
-<body>
+<body id = "strona">
 
   <div class="grid-container">
     <header class="item1">
@@ -67,7 +67,9 @@
           </tbody>
 
         </table>
+        
       </div>
+      <img id='zdjecie' style='width: 50%;' src=''>
     </main>
     <aside class="item4">
       <h1>Opóźnienia</h1>
@@ -96,13 +98,13 @@
             </select>
             <br><br>
             <label for="Imie">Imie:</label><br>
-            <input type="text" placeholder="Jan" id="Imie" required><br><br>
+            <input type="text" placeholder="Jan" id="Imie"><br><br>
             <label for="Nazwisko">Nazwisko:</label><br>
-            <input type="text" placeholder="Kowalski" id="Nazwisko" required><br><br>
+            <input type="text" placeholder="Kowalski" id="Nazwisko"><br><br>
             <label for="Data">Data:</label>
-            <input type="date" id="Data" required><br><br>
+            <input type="date" id="Data"><br><br>
             <input type="reset" value="Reset" />
-            <input type="submit" value="Wyślij">
+            <input type="submit" value="Wyślij" onclick="check_form()">
           </div>
         </form>
     </aside>
@@ -110,6 +112,11 @@
       Autor: <address>Jakub Walendowski (jawalendowski@gmail.com)</address>
     </footer>
   </div>
+  
+  <div class="hover_bkgr" id="zaslona" hidden>
+    <p id="fError"></p>
+    <button id='close_popup' onclick="close_popup()">OK</button>
+  </div> 
   <script src='main.js'></script>
 </body>
 

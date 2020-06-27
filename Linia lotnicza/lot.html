@@ -8,9 +8,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <script src='lot.js'></script>
 </head>
 
-<body>
+<body  onload='best_passenger()'>
 
     <h1>Połączenie Warszawy z Paryżem</h1>
 
@@ -28,16 +29,15 @@
     <p>Super wygodny smolot typu szybciutki, miejsc nie za dużo, lepiej kupić wcześniej miejsce</p>
     <img src="samolot.jpg" alt="Samolot">
 
-    <ol>
-        <li class="tooltip">Maryla Rodowicz<span class="tooltiptext">Miejsce: 10A</span></li>
-        <li class="tooltip">Krzysztof Krawczyk (tym razem nie parostatkiem?)<span class="tooltiptext">Miejsce:
+    <ol class = "lista">
+        <li class="tooltip" data-identyfikator-pasazera="44">Maryla Rodowicz<span class="tooltiptext">Miejsce: 10A</span></li>
+        <li class="tooltip" data-identyfikator-pasazera="45">Krzysztof Krawczyk (tym razem nie parostatkiem?)<span class="tooltiptext">Miejsce:
                 11A</span></li>
-        <li class="tooltip">Bracia Golec<span class="tooltiptext">Miejsce: 30B</span></li>
+        <li class="tooltip"  data-identyfikator-pasazera="4">Bracia Golec<span class="tooltiptext">Miejsce: 30B</span></li>
     </ol>
     <footer>
         Autor: <address>Jakub Walendowski (jawalendowski@gmail.com)</address>
     </footer>
-
 
 </body>
 

@@ -1,9 +1,9 @@
+const imieEl = document.querySelector("input[id=Imie]") as HTMLInputElement;
+const nazwiskoEl = document.querySelector("input[id=Nazwisko]") as HTMLInputElement;
+const dataEl = document.querySelector("input[id=Data]") as HTMLInputElement;
 function check_form() {
   event.preventDefault();
-  const imieEl = document.querySelector("input[id=Imie]") as HTMLInputElement;
-  const nazwiskoEl = document.querySelector("input[id=Nazwisko]") as HTMLInputElement;
-  const dataEl = document.querySelector("input[id=Data]") as HTMLInputElement;
-
+  const przycisk = document.getElementById("przycisk") as HTMLInputElement;
   let res = ``;
   if (imieEl.value === ``)
       res += `<p> Imię nie może być puste </p>`;
@@ -19,8 +19,10 @@ function check_form() {
           res += `<p>Data nie może być wcześniejsza niż aktualna</p>`;
   }
   if (res !== ``) {
-      document.getElementById('zaslona').hidden = false;
-      document.getElementById('fError').innerHTML = res;
+    przycisk.disabled = true;
+  }
+  else {
+    przycisk.disabled = false;
   }
 }
 function close_popup() {
@@ -35,10 +37,8 @@ function wait(ms: number) {
       setTimeout(resolve, ms)
   )
 }
-
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
 async function teczoweKolory(el: HTMLElement) {
-  const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
-
   for (const color of colors) {
       await wait(1000)
       el.style.backgroundColor = color;
@@ -56,3 +56,45 @@ fetch('https://api.github.com/repos/Microsoft/TypeScript/commits').then(response
 }).catch(() => {
     console.log('Problem with fetch image.')
 })
+var clickCounter = 0;
+var fibs = [0, 1];
+const grid = document.querySelector(".grid-container") as HTMLDivElement;
+const right = document.querySelector(".item4");
+const fib = (i: number): number => {
+  while (fibs.length <= i) {
+    fibs.push(fibs[fibs.length - 1] + fibs[fibs.length - 2]);
+  }
+  return fibs[i];
+};
+
+var clickHandler = function (e) {
+  console.log(fib(10 * clickCounter));
+  clickCounter++;
+  var elem = e.target;
+  if (!right.contains(elem))
+      return;
+  tabelaLotow.style.backgroundColor = colors[clickCounter % colors.length];
+};
+grid.addEventListener("click", clickHandler);
+const rezerwacja = document.querySelector(".rezerwacja");
+rezerwacja.addEventListener("click", (e: Event) => {
+  e.stopPropagation();
+});
+grid.oninput = (event) => {
+  const el = event.target;
+  if (el instanceof Element && rezerwacja.contains(el)) {
+      check_form();
+  }
+}
+rezerwacja.addEventListener("submit", (e) => {
+  let res = "Imie: " + imieEl.value + " Nazwisko: " + nazwiskoEl.value +
+  " Data: " + dataEl.value;
+  document.getElementById('zaslona').hidden = false;
+  document.getElementById('fError').innerHTML = res;
+  e.preventDefault();
+});
+
+
+
+
+

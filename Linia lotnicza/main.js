@@ -7,11 +7,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const imieEl = document.querySelector("input[id=Imie]");
+const nazwiskoEl = document.querySelector("input[id=Nazwisko]");
+const dataEl = document.querySelector("input[id=Data]");
 function check_form() {
     event.preventDefault();
-    const imieEl = document.querySelector("input[id=Imie]");
-    const nazwiskoEl = document.querySelector("input[id=Nazwisko]");
-    const dataEl = document.querySelector("input[id=Data]");
+    const przycisk = document.getElementById("przycisk");
     let res = ``;
     if (imieEl.value === ``)
         res += `<p> Imię nie może być puste </p>`;
@@ -27,8 +28,10 @@ function check_form() {
             res += `<p>Data nie może być wcześniejsza niż aktualna</p>`;
     }
     if (res !== ``) {
-        document.getElementById('zaslona').hidden = false;
-        document.getElementById('fError').innerHTML = res;
+        przycisk.disabled = true;
+    }
+    else {
+        przycisk.disabled = false;
     }
 }
 function close_popup() {
@@ -40,9 +43,9 @@ setTimeout(() => {
 function wait(ms) {
     return new Promise((resolve, reject) => setTimeout(resolve, ms));
 }
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
 function teczoweKolory(el) {
     return __awaiter(this, void 0, void 0, function* () {
-        const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
         for (const color of colors) {
             yield wait(1000);
             el.style.backgroundColor = color;
@@ -57,4 +60,40 @@ fetch('https://api.github.com/repos/Microsoft/TypeScript/commits').then(response
     image.src = data[0].author.avatar_url;
 }).catch(() => {
     console.log('Problem with fetch image.');
+});
+var clickCounter = 0;
+var fibs = [0, 1];
+const grid = document.querySelector(".grid-container");
+const right = document.querySelector(".item4");
+const fib = (i) => {
+    while (fibs.length <= i) {
+        fibs.push(fibs[fibs.length - 1] + fibs[fibs.length - 2]);
+    }
+    return fibs[i];
+};
+var clickHandler = function (e) {
+    console.log(fib(10 * clickCounter));
+    clickCounter++;
+    var elem = e.target;
+    if (!right.contains(elem))
+        return;
+    tabelaLotow.style.backgroundColor = colors[clickCounter % colors.length];
+};
+grid.addEventListener("click", clickHandler);
+const rezerwacja = document.querySelector(".rezerwacja");
+rezerwacja.addEventListener("click", (e) => {
+    e.stopPropagation();
+});
+grid.oninput = (event) => {
+    const el = event.target;
+    if (el instanceof Element && rezerwacja.contains(el)) {
+        check_form();
+    }
+};
+rezerwacja.addEventListener("submit", (e) => {
+    let res = "Imie: " + imieEl.value + " Nazwisko: " + nazwiskoEl.value +
+        " Data: " + dataEl.value;
+    document.getElementById('zaslona').hidden = false;
+    document.getElementById('fError').innerHTML = res;
+    e.preventDefault();
 });
